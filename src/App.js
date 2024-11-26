@@ -1,5 +1,3 @@
-// src/App.js
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Step1 from './components/Step1';
@@ -25,7 +23,7 @@ function App() {
 
     return (
         <Router>
-            <div style={{ width: '50%', margin: '0 auto' }}>
+            <div style={{ width: '50%', margin: '0 auto'}}>
                 <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
                 
                 <Routes>
@@ -62,6 +60,7 @@ function App() {
                     <Route
                         path="/summary"
                         element={<Summary formData={formData} />}
+                        setCurrentStep={setCurrentStep}
                     />
                 </Routes>
             </div>
