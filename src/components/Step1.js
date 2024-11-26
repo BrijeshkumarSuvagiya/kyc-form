@@ -1,10 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Step1({ formData, setFormData }) {
+function Step1({ formData, setFormData, setCurrentStep  }) {
    const navigate = useNavigate();
 
    const handleNext = () => {
+       setCurrentStep(2); 
        navigate('/step2');
    };
 
