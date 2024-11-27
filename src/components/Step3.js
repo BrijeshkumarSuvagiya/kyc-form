@@ -18,18 +18,21 @@ function Step3({ formData, setFormData, setCurrentStep  }) {
        <div>
            <h2>Step 3: Document Upload</h2>
            <form>
-               <label>ID Document:</label>
+               <label style={{fontWeight:'bold'}}>ID Document:</label>
                <input
                    type="file"
                    onChange={(e) => setFormData({ ...formData, idDocument: e.target.files[0] })}
                    required
                />
-               <button type="button" onClick={handleBack}>
+                <div style={{display:"flex",marginTop: "10px"}}/>
+                <div style={{display:'flex', justifyContent:'center'}}>
+               <button style={{marginRight: '10px',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleBack}>
                    Back
                </button>
-               <button type="button" onClick={handleNext}>
+               <button  style={{marginRight: '10px',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleNext}>
                    Next
                </button>
+               </div>
            </form>
        </div>
    );
