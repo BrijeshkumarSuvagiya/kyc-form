@@ -23,7 +23,6 @@ export const Input = styled.input`
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-bottom: 15px;
 `;
 
 export const ButtonContainer = styled.div`
