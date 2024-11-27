@@ -1,15 +1,12 @@
-// Step1Styles.js
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    margin: 20px;
-    font-family: Arial, sans-serif;
 `;
 
 export const Title = styled.h2`
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 `;
 
 export const Form = styled.form`
@@ -19,7 +16,7 @@ export const Form = styled.form`
 
 export const Label = styled.label`
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 `;
 
 export const Input = styled.input`
@@ -27,13 +24,12 @@ export const Input = styled.input`
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 15px;
-    width: calc(100% - 30px);
 `;
 
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
 `;
 
 export const Button = styled.button`
@@ -41,13 +37,14 @@ export const Button = styled.button`
     border-radius: 15px;
     font-weight: bold;
     background-color: lightgreen;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
-
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+    
     &:hover {
         background-color: green;
         color: white;
+        transform: scale(1.05);
     }
 `;
 

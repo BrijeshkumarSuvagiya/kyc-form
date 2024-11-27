@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Step3Container, Step3Heading, Label, FileInput, ButtonContainer, Button } from './Step3Styles';  // Import styled components
+import {
+  Step3Container,
+  Step3Heading,
+  Label,
+  FileInput,
+  ButtonContainer,
+  Button,
+  ErrorText,
+} from './Step3Styles'; // Import styled components
 
 function Step3({ formData, setFormData, setCurrentStep }) {
+  const [error, setError] = useState(''); // State to track validation error
   const navigate = useNavigate();
 
   const handleNext = () => {
-    setCurrentStep(4);  
-    navigate('/summary');
+    if (!formData.idDocument) {
+      setError('Please select a file.'); // Show error if no file is selected
+    } else {
+      setError(''); // Clear error if file is selected
+      setCurrentStep(4);
+      navigate('/summary');
+    }
   };
 
   const handleBack = () => {
-    setCurrentStep(2);  
+    setCurrentStep(2);
     navigate('/step2');
   };
 
@@ -22,9 +36,13 @@ function Step3({ formData, setFormData, setCurrentStep }) {
         <Label>ID Document:</Label>
         <FileInput
           type="file"
-          onChange={(e) => setFormData({ ...formData, idDocument: e.target.files[0] })}
+          onChange={(e) => {
+            setFormData({ ...formData, idDocument: e.target.files[0] });
+            setError(''); // Clear error on file selection
+          }}
           required
         />
+        {error && <ErrorText>{error}</ErrorText>} {/* Display error message if validation fails */}
         <ButtonContainer>
           <Button type="button" onClick={handleBack}>
             Back
