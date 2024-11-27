@@ -24,7 +24,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 15px;
     width: calc(100% - 30px);
@@ -49,4 +49,11 @@ export const Button = styled.button`
         background-color: green;
         color: white;
     }
+`;
+
+export const ErrorText = styled.p`
+    color: red;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    margin-bottom: 15px;
 `;
