@@ -39,6 +39,7 @@ export const Button = styled.button`
   padding: 10px 20px;
   border-radius: 15px;
   font-weight: bold;
+  border: none;
   margin-left: 10px;
   background-color: lightgreen;
   cursor: pointer;
@@ -53,4 +54,11 @@ export const Button = styled.button`
   &:last-child {
     margin-right: 0;
   }
+`;
+
+export const ErrorText = styled.p`
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 15px;
 `;
