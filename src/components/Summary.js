@@ -4,18 +4,21 @@ import React, { useState } from "react";
 function Summary({ formData, setCurrentStep }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
+  
   const handleBack = () => {
     setCurrentStep(3);
     navigate("/step3");
   };
+
   const handleSubmit = () => {
     setIsSubmitted(true);
   };
 
   const handleHome = () => {
-    setCurrentStep(1);
+   setCurrentStep(1);
     navigate("/");
   };
+
   if (isSubmitted) {
     return (
       <div>
@@ -24,9 +27,9 @@ function Summary({ formData, setCurrentStep }) {
           Your KYC has been recorded. We will update you shortly about the
           status.
         </p>
-        <button type="button" onClick={handleHome}>
-          Home
-        </button>
+        <button type="button" onClick={handleBack}>
+                   Back
+               </button>
       </div>
     );
   }
@@ -55,6 +58,9 @@ function Summary({ formData, setCurrentStep }) {
       <button type="button" onClick={handleSubmit}>
         Submit
       </button>
+      <button type="button" onClick={handleHome}>
+          Home
+        </button>
     </div>
   );
 }

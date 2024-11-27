@@ -18,28 +18,34 @@ function Step2({ formData, setFormData, setCurrentStep  }) {
        <div>
            <h2>Step 2: Address Details</h2>
            <form>
-               <label>Address:</label>
+               <label  style={{fontWeight:'bold'}}>Address:</label>
                <input
                    type="text"
                    value={formData.address}
                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                    required
+                   style={{padding:'10px',borderRadius: "10px",marginLeft:'15px'}}
                />
-               <label>Country:</label>
+                <div style={{display:"flex",marginTop: "10px"}}/>
+               <label  style={{fontWeight:'bold'}}>Country:</label>
                <select
                    value={formData.country}
                    onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                   style={{padding:'10px', borderRadius: "10px", marginLeft:'15px'}}
                >
                    <option value="">Select Country</option>
                    <option value="USA">USA</option>
                    <option value="Canada">Canada</option>
                </select>
-               <button type="button" onClick={handleBack}>
+               <div style={{display:"flex",marginTop: "10px"}}/>
+               <div style={{display:'flex', justifyContent:'center'}}>
+               <button style={{marginRight: '10px',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleBack}>
                    Back
                </button>
-               <button type="button" onClick={handleNext}>
+               <button style={{padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleNext}>
                    Next
                </button>
+               </div>
            </form>
        </div>
    );
