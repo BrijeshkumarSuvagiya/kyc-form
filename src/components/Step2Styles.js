@@ -2,7 +2,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    margin: 20px;
     font-family: Arial, sans-serif;
 `;
 
@@ -63,4 +62,11 @@ export const Button = styled.button`
     &:last-child {
         margin-right: 0;
     }
+`;
+
+export const ErrorText = styled.p`
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 15px;
 `;

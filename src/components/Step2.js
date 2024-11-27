@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
     Container,
@@ -9,14 +9,41 @@ import {
     Select,
     ButtonContainer,
     Button,
+    ErrorText,
 } from './Step2Styles';
 
 function Step2({ formData, setFormData, setCurrentStep }) {
+    const [errors, setErrors] = useState({ address: '', country: '' });
     const navigate = useNavigate();
 
+    const validateForm = () => {
+        let formIsValid = true;
+        let addressError = '';
+        let countryError = '';
+
+        // Address validation
+        if (!formData.address) {
+            addressError = 'Address is required.';
+            formIsValid = false;
+        }
+
+        // Country validation
+        if (!formData.country) {
+            countryError = 'Please select a country.';
+            formIsValid = false;
+        }
+
+        // Set errors
+        setErrors({ address: addressError, country: countryError });
+
+        return formIsValid;
+    };
+
     const handleNext = () => {
-        setCurrentStep(3); // Update progress to Step 3
-        navigate('/step3');
+        if (validateForm()) {
+            setCurrentStep(3); // Update progress to Step 3
+            navigate('/step3');
+        }
     };
 
     const handleBack = () => {
@@ -37,6 +64,8 @@ function Step2({ formData, setFormData, setCurrentStep }) {
                     }
                     required
                 />
+                {errors.address && <ErrorText>{errors.address}</ErrorText>} {/* Address error */}
+
                 <Label>Country:</Label>
                 <Select
                     value={formData.country}
@@ -48,6 +77,8 @@ function Step2({ formData, setFormData, setCurrentStep }) {
                     <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
                 </Select>
+                {errors.country && <ErrorText>{errors.country}</ErrorText>} {/* Country error */}
+
                 <ButtonContainer>
                     <Button type="button" onClick={handleBack}>
                         Back
