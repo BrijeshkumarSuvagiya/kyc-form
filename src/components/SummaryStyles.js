@@ -1,29 +1,23 @@
 import styled from 'styled-components';
 
-// Container for Step3 form
-export const Step3Container = styled.div`
+// Container for the summary page
+export const SummaryContainer = styled.div`
+  margin: 0 auto;
+  
 `;
 
 // Heading style
-export const Step3Heading = styled.h2`
+export const SummaryHeading = styled.h2`
   font-size: 1.5rem;
   font-weight: bold;
-`;
-
-// Style for form label
-export const Label = styled.label`
-  font-weight: bold;
-  display: block;
-  margin-bottom: 10px;
-`;
-
-// Style for file input
-export const FileInput = styled.input`
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 100%;
   margin-bottom: 20px;
+`;
+
+// Style for the text displaying form data
+export const InfoText = styled.p`
+  font-size: 1rem;
+  margin: 10px 0;
+  font-weight: normal;
 `;
 
 // Style for the buttons container
@@ -39,10 +33,10 @@ export const Button = styled.button`
   padding: 10px 20px;
   border-radius: 15px;
   font-weight: bold;
-  margin-left: 10px;
   background-color: lightgreen;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  margin: 0 10px;
 
   &:hover {
     background-color: green;
@@ -50,7 +44,7 @@ export const Button = styled.button`
     transform: scale(1.05);
   }
 
-  &:last-child {
-    margin-right: 0;
+  &:first-child {
+    margin-right: 15px;
   }
 `;
