@@ -21,9 +21,9 @@ export const Label = styled.label`
 
 export const Input = styled.input`
     padding: 10px;
-    margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    margin-bottom: 15px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -52,4 +52,5 @@ export const ErrorText = styled.p`
     color: red;
     font-size: 0.9rem;
     margin: 5px 0;
+    margin-bottom: 15px;
 `;

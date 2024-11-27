@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { SummaryContainer, SummaryHeading, InfoText, ButtonContainer, Button } from './SummaryStyles';  // Import styled components
 
-function Summary({ formData, setCurrentStep }) {
+function Summary({ formData, setCurrentStep, setFormData }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
 
@@ -16,6 +16,7 @@ function Summary({ formData, setCurrentStep }) {
   };
 
   const handleHome = () => {
+    setFormData('')
     setCurrentStep(1);
     navigate("/");
   };

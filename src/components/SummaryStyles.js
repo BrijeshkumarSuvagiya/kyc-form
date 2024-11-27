@@ -36,7 +36,7 @@ export const Button = styled.button`
   background-color: lightgreen;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
-  margin: 0 10px;
+  margin:  10px 10px;
 
   &:hover {
     background-color: green;
@@ -45,6 +45,6 @@ export const Button = styled.button`
   }
 
   &:first-child {
-    margin-right: 15px;
+    margin-right: 5px;
   }
 `;
