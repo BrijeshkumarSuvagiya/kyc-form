@@ -59,8 +59,7 @@ function App() {
                     />
                     <Route
                         path="/summary"
-                        element={<Summary formData={formData} />}
-                        setCurrentStep={setCurrentStep}
+                        element={<Summary formData={formData} setCurrentStep={setCurrentStep}/>}
                     />
                 </Routes>
             </div>
