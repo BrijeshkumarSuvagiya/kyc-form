@@ -23,13 +23,14 @@ function Step3({ formData, setFormData, setCurrentStep  }) {
                    type="file"
                    onChange={(e) => setFormData({ ...formData, idDocument: e.target.files[0] })}
                    required
+                   style={{marginLeft:'15px'}}
                />
                 <div style={{display:"flex",marginTop: "10px"}}/>
                 <div style={{display:'flex', justifyContent:'center'}}>
-               <button style={{marginRight: '10px',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleBack}>
+               <button style={{ border: 'none',marginRight: '10px',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleBack}>
                    Back
                </button>
-               <button  style={{marginRight: '10px',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleNext}>
+               <button  style={{border: 'none',marginRight: '10px',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleNext}>
                    Next
                </button>
                </div>

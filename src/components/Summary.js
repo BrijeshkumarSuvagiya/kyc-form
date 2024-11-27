@@ -27,8 +27,8 @@ function Summary({ formData, setCurrentStep }) {
           Your KYC has been recorded. We will update you shortly about the
           status.
         </p>
-        <button type="button" onClick={handleBack}>
-                   Back
+        <button style={{border: 'none',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}}  type="button" onClick={handleHome}>
+                   Home
                </button>
       </div>
     );
@@ -52,15 +52,15 @@ function Summary({ formData, setCurrentStep }) {
         <strong>ID Document:</strong>{" "}
         {formData.idDocument?.name || "Not uploaded"}
       </p>
-      <button type="button" onClick={handleBack}>
+      <div style={{display:"flex",marginTop: "10px"}}/>
+      <div style={{display:'flex', justifyContent:'center'}}>
+      <button style={{ border:'none',padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleBack}>
         Back
       </button>
-      <button type="button" onClick={handleSubmit}>
+      <button  style={{border:'none',marginLeft: "15px", padding:'10px', borderRadius:'15px', fontWeight:'bold',backgroundColor:'lightgreen'}} type="button" onClick={handleSubmit}>
         Submit
       </button>
-      <button type="button" onClick={handleHome}>
-          Home
-        </button>
+      </div>
     </div>
   );
 }
