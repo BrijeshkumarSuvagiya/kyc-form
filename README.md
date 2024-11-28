@@ -16,7 +16,7 @@ The application is designed to validate user input at each step and guide them t
 - Document upload functionality
 - Responsive design using styled-components
 
-## ## Libraries and Tools Used:Technologies Used:
+## Libraries and Tools Used:Technologies Used:
 - **React**: JavaScript library for building user interfaces
 - **React Router**: For routing and navigation between form steps
 - **Styled-components**: For CSS-in-JS styling and component-based design
