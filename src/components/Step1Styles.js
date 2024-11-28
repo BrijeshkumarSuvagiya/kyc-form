@@ -17,6 +17,7 @@ export const Form = styled.form`
 export const Label = styled.label`
     font-weight: bold;
     margin-bottom: 5px;
+     margin-top: 10px;
 `;
 
 export const Input = styled.input`

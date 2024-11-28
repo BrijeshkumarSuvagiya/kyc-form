@@ -15,11 +15,11 @@ function App() {
         idDocument: null,
     });
     
-    // Track the current step (1 for Step1, 2 for Step2, etc.)
+    
     const [currentStep, setCurrentStep] = useState(1);
 
-    // Total number of steps
-    const totalSteps = 4;  // 3 steps + summary page
+   
+    const totalSteps = 4; 
 
     return (
         <Router>

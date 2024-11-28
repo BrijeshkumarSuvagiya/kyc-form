@@ -54,6 +54,7 @@ function Step1({ formData, setFormData, setCurrentStep }) {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder='FirstName LastName'
                     required
                 />
                 {errors.name && <ErrorText>{errors.name}</ErrorText>}  {/* Display name error */}

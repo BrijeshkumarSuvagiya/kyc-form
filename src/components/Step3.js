@@ -8,10 +8,10 @@ import {
   ButtonContainer,
   Button,
   ErrorText,
-} from './Step3Styles'; // Import styled components
+} from './Step3Styles'; 
 
 function Step3({ formData, setFormData, setCurrentStep }) {
-  const [error, setError] = useState(''); // State to track validation error
+  const [error, setError] = useState(''); 
   const navigate = useNavigate();
 
   const handleNext = () => {

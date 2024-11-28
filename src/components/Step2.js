@@ -63,6 +63,7 @@ function Step2({ formData, setFormData, setCurrentStep }) {
                         setFormData({ ...formData, address: e.target.value })
                     }
                     required
+                    placeholder='123 First Street, NY - 0001'
                 />
                 {errors.address && <ErrorText>{errors.address}</ErrorText>} {/* Address error */}
 
