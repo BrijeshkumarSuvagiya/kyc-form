@@ -32,7 +32,7 @@ The application is designed to validate user input at each step and guide them t
 ### Steps:
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/project-name.git
+   git clone [https://github.com/your-username/project-name.git](https://github.com/BrijeshkumarSuvagiya/kyc-form.git)
    cd project-name
    npm install 
    npm start
